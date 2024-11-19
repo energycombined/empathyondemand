@@ -1,4 +1,6 @@
 
+# Mapping Evaluative Language to Emotional States and Needs: Generative AI with Machine Learning Models for Psychological Chatbots
+
 
 ### Introduction
 
@@ -96,6 +98,9 @@ Building on the foundation laid by these works, this paper proposes a novel fram
 
 ---
 
+
+
+
 ### **Mathematical Basis for Proposed Solutions**
 
 #### **1. Latent Dirichlet Allocation (LDA)**
@@ -123,6 +128,7 @@ P(w | z) = \frac{\text{count}(w, z) + \beta}{\sum_w (\text{count}(w, z) + \beta)
 \]
 
 ---
+# Generative AI with LLMs for Emotional Intelligence: Mapping of Evaluative Expressions to Feelings and Needs
 
 ### **Why Our Solution is the Best**
 
