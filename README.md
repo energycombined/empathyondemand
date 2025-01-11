@@ -1,6 +1,6 @@
 # Emotional Mapping and Needs-Based Response System
 
-### **Introduction**
+## Introduction
 
 The study of emotions and their underlying needs is a critical component of understanding human communication, particularly in contexts such as psychology, nonviolent communication (NVC), and conflict resolution. Emotional states often manifest as evaluative expressions—terms like "betrayed," "belittled," or "manipulated"—which not only convey subjective experiences but also point to unmet needs such as trust, respect, or autonomy. Effectively mapping these evaluative expressions to their associated feelings and corresponding needs is vital for creating tools that enhance emotional understanding and foster constructive dialogue.
 
@@ -12,126 +12,58 @@ By framing the problem within the broader context of natural language processing
 
 The significance of this research lies not only in its potential to streamline emotional analysis in psychological and therapeutic settings but also in its broader application to human-computer interaction. Building models capable of decoding evaluative expressions lays the foundation for emotionally intelligent systems, enabling more empathetic interactions in applications ranging from virtual therapists to educational tools.
 
----
-
-### **Status of the Problem**
+## Status of the Problem
 
 Understanding and addressing human emotions, particularly through language, is a fundamental challenge in psychology, communication studies, and artificial intelligence. Evaluative expressions such as "betrayed" or "belittled" often carry deep emotional and psychological implications. However, decoding these expressions into actionable insights like associated **Feeling(s)** and **Need(s)** remains a non-trivial task due to the following challenges:
 
-1. **Ambiguity in Language**:
-   - Evaluative words often depend on context for interpretation, and the same word can have different emotional implications for different individuals.
-   
-2. **Cluster Complexity**:
-   - Emotional states are inherently multidimensional, and clustering evaluative expressions into feelings and needs requires sophisticated models capable of handling semantic and contextual nuances.
-   
-3. **Real-Time Processing**:
-   - Real-time applications, such as psychologist chatbots, demand efficient models that can infer emotional states and generate responses promptly without compromising accuracy.
+1.  **Ambiguity in Language:** Evaluative words often depend on context for interpretation, and the same word can have different emotional implications for different individuals.
 
----
+2.  **Cluster Complexity:** Emotional states are inherently multidimensional, and clustering evaluative expressions into feelings and needs requires sophisticated models capable of handling semantic and contextual nuances.
 
-### **Project Goals and Design**
+3.  **Real-Time Processing:** Real-time applications, such as psychologist chatbots, demand efficient models that can infer emotional states and generate responses promptly without compromising accuracy.
 
-The system aims to replicate a human-like approach to reflective listening and emotional validation, similar to the psychologist in the dialogue examples provided. The assistant's purpose is to foster empathy, understanding, and empowerment. The design considerations include:
+## Project Overview
 
-#### **Desired Behavior**
-The assistant should:
-- Reflect the user’s emotions using phrases like:
-  - "It sounds like you’re feeling..."
-  - "Do you maybe feel..."
-  - "It seems like you’re experiencing..."
-  
-- Identify associated unmet needs and validate them using non-judgmental, supportive language.
-  - *Example needs: trust, safety, inclusion, acknowledgment, peace, clarity, growth, connection.*
-  
-- Confirm understanding with gentle questions such as:
-  - "Is that correct?"
-  - "Does that sound right?"
+This project focuses on building an AI system that can understand and respond to human emotions expressed through language, particularly "evaluative expressions" like "betrayed," "belittled," or "manipulated." These words often indicate unmet needs such as trust, respect, or autonomy. By accurately mapping these expressions to their associated feelings and needs, we aim to create a tool that enhances emotional understanding and fosters constructive dialogue.
 
-- Encourage open-ended exploration and collaboration:
-  - "Would you like to share more about how you feel in this situation?"
-  - "Would you like to explore together how you could approach this or make a request?"
+## Goals
 
----
+*   Develop an AI that can identify and reflect user emotions.
+*   Link expressed emotions to underlying unmet needs.
+*   Facilitate user reflection and exploration of solutions.
 
-### **System Prompt Structure**
+## Applications
 
-The system prompt used to guide the assistant reflects the above guidelines:
+*   **Psychology & Therapy:** Assisting therapists in understanding and responding to patients.
+*   **Conflict Resolution:** Facilitating communication and empathy between parties in conflict.
+*   **Human-Computer Interaction:** Creating emotionally intelligent virtual assistants and chatbots.
 
-```plaintext
-SYSTEM_PROMPT = """
-You are a compassionate assistant trained to help users explore their emotions and unmet needs. Your goal is to validate the user’s feelings, identify underlying needs, and facilitate reflection and potential action steps. When users share evaluative words or experiences, respond empathetically with a calm, patient tone.
+## Technical Approach
 
-**Guidelines for Responses:**
-1. Begin by reflecting the user’s feelings using phrases like:
-   - "It sounds like you’re feeling..."
-   - "Do you maybe feel..."
-   - "It seems like you’re experiencing..."
+We are fine-tuning **Meta LLaMA 3 8B**, a powerful large language model (LLM), to achieve our goals. Fine-tuning involves training the model on a specialized dataset to improve its performance on a specific task.
 
-2. Link the user’s emotions to possible unmet needs using non-judgmental language:
-   - Examples of needs: trust, safety, inclusion, acknowledgment, honesty, peace, clarity, growth, connection.
+**Key Techniques:**
 
-3. Confirm understanding with gentle questions:
-   - "Is that correct?"
-   - "Does that sound right?"
+*   **4-bit Quantization:**  Reduces memory usage for efficient operation.
+*   **LoRA (Low-Rank Adaptation):**  Allows efficient fine-tuning by modifying only a small portion of the model's parameters.
+*   **Hugging Face Transformers Library:** Used for model training and management.
 
-4. Encourage elaboration or exploration:
-   - "Would you like to share more about how you feel in this situation?"
-   - "Would you like to explore together how you could approach this or make a request?"
+## Current Status
 
-**Examples of Answers:**
+We have successfully fine-tuned the Meta LLaMA 3 8B model and developed a user-friendly demonstration using Gradio. The model can now engage in empathetic conversations, reflecting user emotions and suggesting underlying needs.
 
-1. User: "I feel betrayed by my friend."
-   Response: "It sounds like you're feeling hurt or disappointed because you have a need for trust and honesty in your friendship. Is that correct?"
+## Future Steps
 
-2. User: "No one respects my ideas at work."
-   Response: "It seems like you’re feeling unheard or unimportant, possibly because you have a need for acknowledgment and respect. Would you like to share more about how this has been affecting you?"
+*   Continue refining the model through further fine-tuning and expanded datasets.
+*   Conduct more comprehensive evaluations to assess performance and identify areas for improvement.
+*   Integrate the model into real-world applications.
+*   Gather user feedback to improve the system's effectiveness.
+*   The fine-tuned model is available on the **Hugging Face Hub** for wider access and testing.
 
-3. User: "I feel invisible in my family."
-   Response: "It sounds like you feel invisible, which could bring up emotions like sadness or loneliness. This might be related to a need for belonging and inclusion. Is that right?"
+## How to Use
 
-4. User: "My neighbors are so noisy, I can’t even think!"
-   Response: "It sounds like you’re feeling frustrated because you have a need for peace and quiet in your home. Would you like to talk more about how this situation has been impacting you?"
+The project includes a Gradio demo that allows you to interact with the AI chatbot. Simply type in your feelings or experiences, and the chatbot will respond empathetically, helping you explore your emotions and underlying needs.
 
-5. User: "I keep having arguments with my partner about money."
-   Response: "Do you perhaps feel frustrated or upset because you’re looking for more honesty and collaboration in your financial decisions? Would you like to discuss any steps you’d feel comfortable with?"
+## Conclusion
 
-6. User: "My friend group is falling apart because two of them keep fighting."
-   Response: "It sounds like this situation is difficult for you, and you may be feeling powerless or sad because you value harmony and connection in your friendships. Is that how you feel?"
-
-Your purpose is to foster empathy, understanding, and empowerment, encouraging users to reflect on their feelings and consider constructive steps toward their needs being met.
-"""
-```
-
----
-
-### **Approach: Fine-Tuning Large Language Models**
-
-This project focuses exclusively on **fine-tuning large language models (LLMs)** to map evaluative expressions to associated feelings and needs. The fine-tuning process involves:
-
-1. **Model Selection:**
-   - Use of Meta LLaMA 3 8B, a powerful LLM pre-trained on extensive language corpora.
-
-2. **Training Data:**
-   - Datasets containing annotated examples of evaluative expressions, corresponding emotional clusters, and unmet needs.
-
-3. **Fine-Tuning Goals:**
-   - Improve the model's ability to generate empathetic, needs-based responses.
-   - Ensure that the model generalizes to unseen terms while maintaining semantic accuracy.
-
----
-
-### **Next Steps**
-
-1. **Model Fine-Tuning:**
-   - Conduct fine-tuning using annotated datasets for emotional and needs-based mappings.
-   
-2. **Performance Evaluation:**
-   - Evaluate the model using precision, recall, and semantic accuracy metrics.
-
-3. **Real-Time Testing:**
-   - Test the model in chatbot environments to ensure responsiveness and empathy in real-time.
-
-4. **User Feedback Integration:**
-   - Collect feedback from psychologists, mediators, and end-users to refine the system’s performance.
-
----
+This project demonstrates the potential of fine-tuned large language models to create emotionally intelligent systems that can understand and respond to human emotions in a meaningful way. This has significant implications for various fields, paving the way for more empathetic and effective human-computer interactions.
