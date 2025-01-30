@@ -72,7 +72,7 @@
 
 Here is the full markdown table based on the image:
 
-```markdown
+
 # DeepSeek Finetuning Cost Estimates
 
 | #  | DeepSeek Model            | Parameters     | Min AWS Instance (Inference) | GPUs                          | Quantization | Finetuning Method                                  | Cost Estimate (1k Samples) | Notes |
@@ -84,7 +84,7 @@ Here is the full markdown table based on the image:
 | 5  | DeepSeek 33B              | 33B           | p4d.24xlarge                 | 8x NVIDIA A100 (40 GB)       | 4-bit        | QLoRA + Megatron-LM + 1k-sample dataset         | 3k – 5k                    | Trains in 12–24 hours. Enterprise-ready use cases. |
 | 6  | DeepSeek 67B              | 67B           | p4d.24xlarge                 | 8x NVIDIA A100 (40 GB)       | 4-bit        | LoRA + DeepSpeed ZeRO-3 + 1k-sample dataset     | 8k – 12k                    | Requires heavy optimization. 1–2 weeks of tuning. |
 | 7  | DeepSeek 671B             | 671B          | p4d.24xlarge (64x nodes)     | 512x NVIDIA A100             | 8-bit        | LoRA + Megatron-LM + 1k-sample dataset          | 50k+                        | Impractical for most users. Research-only. |
-```
+
 
 This markdown table captures all the details from the provided image, ensuring correct formatting and alignment. Let me know if you need any modifications! 🚀
 
