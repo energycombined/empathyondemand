@@ -70,7 +70,7 @@
 
 ---
 
-Here is the full markdown table based on the image:
+
 
 
 # DeepSeek Finetuning Cost Estimates
