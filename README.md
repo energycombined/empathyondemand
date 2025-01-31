@@ -168,3 +168,7 @@ The project includes a Gradio demo that allows you to interact with the AI chatb
 ## Conclusion
 
 This project demonstrates the potential of fine-tuned large language models (Meta LLaMA 3 and DeepSeek) to create emotionally intelligent systems that can understand and respond to human emotions in a meaningful way. This has significant implications for various fields, paving the way for more empathetic and effective human-computer interactions and contributing to a more understanding and compassionate digital world. Our collaboration with Tilburg University ensures that this project is not only technically sound but also ethically grounded and socially responsible.
+## License
+This work is licensed under a 
+Creative Commons Attribution 4.0 International License 
+(http://creativecommons.org/licenses/by/4.0/).
