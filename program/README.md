@@ -86,7 +86,7 @@
 | 7  | DeepSeek 671B             | 671B          | p4d.24xlarge (64x nodes)     | 512x NVIDIA A100             | 8-bit        | LoRA + Megatron-LM + 1k-sample dataset          | 50k+                        | Impractical for most users. Research-only. |
 
 
-This markdown table captures all the details from the provided image, ensuring correct formatting and alignment. Let me know if you need any modifications! 🚀
+
 
 
 
