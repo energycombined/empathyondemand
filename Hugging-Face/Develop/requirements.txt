@@ -1,7 +1,0 @@
-huggingface_hub===0.25.0
-transformers==4.47.1
-pandas
-torch
-spaces
-tokenizers==0.21.0
-peft==0.14.0
